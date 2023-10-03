@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oxanium:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oxanium:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <title>ShopCard</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container container">
+                <div class="header-contact">
+                    <span>(+227) 99108687</span>
+
+                    <span>Our location</span>
+                </div>
+                <p class="header-alert-news">
+                    Super Values Deals - Save more with coupons
+                </p>
+                <a href="login-register.html" class="header-top-action"></a>
+            </div>
+        </div>
+
+        <nav class="nav container">
+
+            <a href="index.html" class="nav-logo">
+                <h1>MasubaShop.</h1>
+            </a>
+            
+            <div class="nav-menu " id="nav-menu" >
+                
+                <div class="nav-menu-top">
+                    <a href="#" class="nav-menu-logo">
+                        <h1>MasubaShop.</h1>
+                    </a>
+
+                    <div class="nav-close" id="nav-closes">
+                        <i class="fi fi-rs-cross-small"></i>
+                    </div>
+                </div>
+                <div class="header-search1">
+                    <input type="text" class="form-input1" onkeyup="" placeholder="Search For item ... " id="search-item
+
+                    <button class="search-btn1" >
+                        <img src=".vscode/img/search.png" alt="">
+                    </button>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html" class="nav-link active-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="accounts" class="nav-link active-link">My Accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="compare.index" class="nav-link active-link">Compare</a>
+                    </li>
+                </ul>
+               
+            </div>
+            <div class="nav-menu1" id="nav-menu1">
+                <div class="cart">
+                    <div class="cart-header">
+                        <div class="column1">Item</div>
+                        <div class="column2">Unit price</div>
+                        <div class="column3">Units</div>
+                        <div class="column4">Del</div>
+                    </div>
+                    <div class="cart-items">
+                        <!-- render cart items here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="subtotal">
+                            Subtotal (0 items): $0
+                        </div>
+                        <div class="checkout tab-btns">
+                            <span class="tab-btn" id="clear">Clear</span>
+                            <span class="tab-btn" id="nav-closes1">checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-user-actions">
+                <a  class="header-action-btn">
+                    <img src=".vscode/img/icon-heart.svg" alt="" >
+                    <span class="count">0</span>
+                </a>
+                <a class="header-action-btn">
+                    <img src=".vscode/img/icon-cart.svg" alt="" class="heart">
+                    <span class="count">0</span>
+                </a>
+
+                <div class="header-action-btn nav-toggle" id="nav-toggles">
+                    <img src=".vscode/img/menu-burger.svg" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="home section-lg">
+            <div class="home-container container grid">
+                <div class="home-content">
+                    <span class="home-subtitle">Hot promotions</span>
+                    <h1 class="home-title"> MasuBa Fashion <br> <span>Great Collection</span></h1>
+                    <p class="home-description">Save more With coupons & up to 20% off</p>
+                    <a href="shop.html" class="btn">Shop Now</a>
+                    
+                </div>
+                <img src=".vscode/img/home-img.png" alt="" class="home-img">
+            </div>
+            
+        </section>
+        <section class="categories container section">
+            <h3 class="section-title"><span>Popular </span>categories</h3>
+
+            <div class="categories__container swiper">
+                <div class="swiper-wrapper" id="link-categories">
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items"></a>
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items">
+                        
+                    </a>
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items">
+                        
+                    </a>
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items">
+                        
+                    </a>
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items">
+                        
+                    </a>
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items">
+                        
+                    </a>
+                    <a href="shop.html" class="category-item swiper-slide" id="category-items">
+                        
+                    </a>
+                    <a href="shop.html" class="category-item " id="category-items">
+                       
+                    </a>
+                </div>
+
+                <div class="swiper-button-next"><i class="fi fi-bs-angle-right"></i></div>
+                <div class="swiper-button-prev"><i class="fi fi-bs-angle-left"></i></div>
+            </div>
+        </section>
+
+
+        <!-- section product -->
+        <section class="products section container" id="products-list">
+
+            <div class="tab-btns" id="buttons">
+                 
+                <div class="tab-btns">
+                    <span class="tab-btn active-tab" onclick="filterProduct('ALL')" >
+                        ALL
+                    </span>
+                    <span class="tab-btn " onclick="filterProduct('Shirts')">
+                        Shirts
+                    </span>
+                    <span class="tab-btn " onclick="filterProduct('Shoes')">
+                        Shoes
+                    </span>
+                    <span class="tab-btn " onclick="filterProduct('Jumpsuits')">
+                        Jumpsuits
+                    </span>
+                    <span class="tab-btn " onclick="filterProduct('Bags')">
+                        Bags
+                    </span>
+                </div>
+                <div class="header-search">
+                    <input type="text" name="" id="" class="form-input"  placeholder="Search For item ... sofiane" onkeyup="searchProduct()">
+                    <button class="search-btn">
+                        <img src=".vscode/img/search.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="tab-items">
+                <div class="tab-item active-tab" content id="featured">
+                    <div class="products-container grid">
+                      
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
