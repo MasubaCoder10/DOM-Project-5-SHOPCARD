@@ -383,20 +383,33 @@ star.forEach((element) => {
 // get element with localStorage
 const subtotalEl = document.querySelector(".subtotal");
 const totalItemsInCartEl = document.querySelectorAll(".count");
-console.log(totalItemsInCartEl);
 const cartItemsEl = navMenu1.querySelector(".cart-items");
 
-
+// initialisation of LS
 let cards = JSON.parse(localStorage.getItem("card")) || [];
 updateCart(); 
 
+const alertNotification = document.querySelector(".alert")
 // ADD TO CART
 function addToCart(id) {
   // check if prodcut already exist in cart
   if (cards.some((item) => item.id === id)) {
     changeNumberOfUnits("plus", id);
   } else {
+
+    //get an object in my products array
+
+    /* La méthode find() renvoie la valeur du premier élément trouvé 
+    dans le tableau qui respecte la condition donnée par la fonction 
+    de test passée en argument. Sinon, la valeur undefined est renvoyée. */
+
+    alertNotification.classList.add("alert-show");
+
+    setTimeout(() => {
+      alertNotification.classList.remove("alert-show");
+    }, 2000);
     const item = products.find((product) => product.id === id);
+   
 
     cards.push({
       ...item,
@@ -442,11 +455,12 @@ console.log(cartItemsEl);
 // render cart items
 function renderCartItems() {
   cartItemsEl.innerHTML = ""; // clear cart element
+  
   cards.forEach((item) => {
     cartItemsEl.innerHTML += `
     
         <div class="cart-item">
-            <div class="item-info" onclick="removeItemFromCart(${item.id})">
+            <div class="item-info" >
                 <img src="${item.img1}" alt="${item.name}">
                 <h4>${item.name}</h4>
             </div>
@@ -457,7 +471,7 @@ function renderCartItems() {
                 <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
                 <div class="number">${item.numberOfUnits}</div>
                 <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div> 
-                <div class="nav-close1"> <i class="fi fi-rs-cross-small"></i> </div>          
+                <div class="nav-close1" onclick="removeItemFromCart(${item.id})"> <i class="fi fi-rs-trash"></i> </div>          
             </div> 
         </div>
       `;
@@ -467,7 +481,12 @@ function renderCartItems() {
 // remove item from cart
 function removeItemFromCart(id) {
   cards = cards.filter((item) => item.id !== id);
+  alertNotification.classList.add("alert-show");
 
+    setTimeout(() => {
+      alertNotification.classList.remove("alert-show");
+    }, 2000);
+    const item = products.find((product) => product.id === id);
   updateCart();
 }
 
@@ -489,7 +508,12 @@ function changeNumberOfUnits(action, id) {
       numberOfUnits,
     };
   });
+  alertNotification.classList.add("alert-show");
 
+  setTimeout(() => {
+    alertNotification.classList.remove("alert-show");
+  }, 2000);
+  const item = products.find((product) => product.id === id);
   updateCart();
 }
 
@@ -502,7 +526,6 @@ if(clear){
 }
 
 const deleteRow = document.querySelector('.nav-close1')
-console.log(deleteRow);
 if(deleteRow){
   deleteRow.addEventListener('click', (e) =>{
     if(e.target.classList.contains('fi-rs-cross-small')){
